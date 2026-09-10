@@ -1,0 +1,3 @@
+Tóm tắt quy tắc chọn lựaChỉ muốn chứa dữ liệu & truy xuất theo chỉ số 0, 1, 2 ---> Dùng ArrayList.
+Cần kiểm tra contains() hoặc lọc trùng $\rightarrow$ Dùng HashSet.Cần tìm kiếm theo ID / Mã / Key ---> Dùng HashMap.
+Cần làm hàng đợi (FIFO/LIFO - thêm/bớt ở 2 đầu) ---> Dùng ArrayDeque hoặc LinkedList.
