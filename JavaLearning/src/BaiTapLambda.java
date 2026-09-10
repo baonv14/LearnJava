@@ -1,7 +1,24 @@
 import java.util.*;
 import java.util.function.Predicate;
+import java.util.stream.Collectors;
 
 public class BaiTapLambda {
+
+    static class Product {
+        String name ;
+        double price;
+        String category;
+
+        public Product(String name, double price, String category) {
+            this.name = name;
+            this.price = price;
+            this.category = category;
+        }
+
+        public String toString() {
+            return name + " (" + price + ") " + category;
+        }
+    }
 
     public static List<Integer> locso(List<Integer> list, Predicate<Integer> dieukien)
     {
@@ -38,5 +55,18 @@ public class BaiTapLambda {
 
        List<String> startB = checkTen(dsTen,d -> d.startsWith("B"));
        System.out.println(startB);
+
+
+       List<Product> dsProd = Arrays.asList(
+               new Product("Iphone 15",10000,"E"),
+               new Product("Ipad 15",20000,"E"),
+               new Product("Macbook",30000,"E"),
+               new Product("Shirt",8000,"C")
+       );
+
+        List<Product> luxuryE =
+                dsProd.stream().filter(product -> product.category.equals("E") && product.price>10000).collect(Collectors.toList());
+        System.out.println(luxuryE);
+
     }
 }
