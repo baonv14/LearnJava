@@ -48,5 +48,11 @@ public class CollectionDemo {
             System.out.println("Số điện thoại: "+ entry.getKey() + "là của " + entry.getValue());
         }
 
+
+        System.out.println("------------ARRAY LIST LAMbDA----------");
+
+        danhSachTen.forEach(ten->System.out.println(ten));
+
+
     }
 }
